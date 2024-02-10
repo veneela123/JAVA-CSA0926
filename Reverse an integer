@@ -1,0 +1,27 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a number:");
+		String a=sc.nextLine();
+		char c=a.charAt(0);
+		int rev=0;
+    	if (Character.isDigit(c))
+    	{
+    	    int n=Integer.valueOf(a);
+        	while(n!=0)
+        	{
+        		int rem=n%10;
+        		rev=rev*10+rem;
+        		n=n/10;
+        	}
+        	System.out.println("Reverse of a number:"+rev);
+    	}
+    	else
+    	{
+    		System.out.println("invalid");
+    	}
+	}
+}
