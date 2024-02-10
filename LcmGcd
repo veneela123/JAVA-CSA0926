@@ -1,0 +1,23 @@
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int arr[]={16,20};
+        int lcm=arr[0];
+        int gcd=arr[0];
+        for(int i=1;i<arr.length;i++)
+        {
+            gcd=findGcd(arr[i],lcm);
+            lcm=(lcm*arr[i]/gcd);
+        }
+        System.out.println("Lcm="+lcm);
+        System.out.println("Gcd="+gcd);
+    }
+    public static int findGcd(int a,int b)
+    {
+        if(b==0)
+            return a;
+        return Gcd(b,a%b);
+    }
+}
