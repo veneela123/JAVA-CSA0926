@@ -1,0 +1,16 @@
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    try 
+	    {
+	        String s=null;
+	        int len=s.length();
+	        System.out.println(len);
+	    } 
+	    catch(Exception e) 
+	    {
+	        System.out.println(e);
+	    }
+	}
+}
